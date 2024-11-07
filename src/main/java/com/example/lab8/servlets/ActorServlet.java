@@ -15,12 +15,6 @@ import java.util.List;
 public class ActorServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Usar ActorDAO para obtener la lista de actores
-        ActorDAO actorDAO = new ActorDAO();
-        List<Actor> actores = actorDAO.listarActores();
-
-        // Pasar la lista de actores a la vista JSP
-        request.setAttribute("actores", actores);
         request.getRequestDispatcher("/WEB-INF/listaActores.jsp").forward(request, response);
     }
 }

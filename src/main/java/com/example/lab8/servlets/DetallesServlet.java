@@ -14,15 +14,7 @@ import java.io.IOException;
 public class DetallesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Obtener el ID de la película desde la solicitud
-        int idPelicula = Integer.parseInt(request.getParameter("id"));
 
-        // Usar PeliculaDAO para obtener los detalles de la película
-        PeliculaDAO peliculaDAO = new PeliculaDAO();
-        Pelicula pelicula = peliculaDAO.obtenerPeliculaPorId(idPelicula);
-
-        // Pasar los detalles de la película a la vista JSP
-        request.setAttribute("pelicula", pelicula);
         request.getRequestDispatcher("/WEB-INF/viewPelicula.jsp").forward(request, response);
     }
 }
