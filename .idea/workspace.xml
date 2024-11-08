@@ -26,6 +26,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MrFoxito-hack"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/MrFoxito-hack/IWEB_LAB6_20212472.git",
+    "accountId": "4cb99a1b-2df0-4743-b9af-8ed82ee29c1b"
+  }
+}]]></component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -59,10 +71,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat Server.Tomcat 10.1.31.executor": "Run",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "desarrollo",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/migue.FOXI.000/Downloads/Lab8/src/main/webapp",
+    "last_opened_file_path": "C:/Users/migue.FOXI.000/OneDrive/Desktop/IWEB_LAB6_20212472",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -158,6 +170,7 @@
       <workItem from="1731007589996" duration="5119000" />
       <workItem from="1731014178602" duration="675000" />
       <workItem from="1731014867817" duration="2788000" />
+      <workItem from="1731032457042" duration="72000" />
     </task>
     <task id="LOCAL-00001" summary="te amo Gonchito wapo">
       <option name="closed" value="true" />
