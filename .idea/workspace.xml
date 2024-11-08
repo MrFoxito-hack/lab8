@@ -10,13 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e8138d2-a96c-4496-aa1a-e650ffeba75a" name="Changes" comment="te amo Gonchito wapo">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlets/ActorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlets/ActorServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab8/beans/Pelicula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/beans/Pelicula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab8/daos/ActorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/daos/ActorDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab8/daos/DaoBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/daos/DaoBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab8/daos/PeliculaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/daos/PeliculaDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlets/DetallesServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlets/DetallesServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/listaActores.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/listaActores.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlets/PeliculaServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlets/PeliculaServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/listaPeliculas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/listaPeliculas.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/viewPelicula.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/viewPelicula.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +66,9 @@
   "keyToString": {
     "JavaScript Debug.listaActores.jsp.executor": "Run",
     "JavaScript Debug.listaPeliculas.jsp.executor": "Run",
+    "Maven.Lab8 [clean].executor": "Run",
+    "Maven.Lab8 [compile].executor": "Run",
+    "Maven.Lab8 [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat Server.Tomcat 10.1.31.executor": "Run",
@@ -85,6 +93,13 @@
     ]
   }
 }]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn install" />
+      <command value="mvn compile" />
+    </option>
+  </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.31">
     <configuration name="listaActores.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/Lab8_war_exploded/WEB-INF/listaActores.jsp">
       <method v="2" />

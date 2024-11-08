@@ -10,7 +10,10 @@ public class PeliculaDAO extends DaoBase {
     // Método para listar todas las películas ordenadas por rating y box office
     public List<Pelicula> listarPeliculas() {
         List<Pelicula> peliculas = new ArrayList<>();
-        String sql = "SELECT * FROM Pelicula ORDER BY rating DESC, boxOffice DESC";
+        String sql = "SELECT p.idPelicula, p.titulo, p.director, p.anoPublicacion, p.rating, p.boxOffice, g.nombre AS genero " +
+                "FROM Pelicula p JOIN Genero g ON p.idGenero = g.idGenero " +
+                "ORDER BY p.rating DESC, p.boxOffice DESC";
+
 
         try (Connection conn = getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql);
@@ -29,28 +32,30 @@ public class PeliculaDAO extends DaoBase {
     }
 
     // Método para obtener los detalles de una película por su ID
-    public Pelicula obtenerPeliculaPorId(int id) {
-        Pelicula pelicula = null;
-        String sql = "SELECT * FROM Pelicula WHERE idPelicula = ?";
-
-        try (Connection conn = getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
-
-            stmt.setInt(1, id);
-            ResultSet rs = stmt.executeQuery();
-
-            if (rs.next()) {
-                pelicula = mapResultSetToPelicula(rs);
+    public Pelicula getPeliculaById(int idPelicula) throws SQLException {
+        String query = "SELECT * FROM Pelicula WHERE idPelicula = ?";
+        try (Connection connection = getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setInt(1, idPelicula);
+            try (ResultSet resultSet = statement.executeQuery()) {
+                if (resultSet.next()) {
+                    Pelicula pelicula = new Pelicula();
+                    pelicula.setIdPelicula(resultSet.getInt("idPelicula"));
+                    pelicula.setTitulo(resultSet.getString("titulo"));
+                    pelicula.setDirector(resultSet.getString("director"));
+                    pelicula.setAnoPublicacion(resultSet.getInt("anoPublicacion"));
+                    pelicula.setRating(resultSet.getDouble("rating"));
+                    pelicula.setBoxOffice(resultSet.getDouble("boxOffice"));
+                    pelicula.setIdGenero(resultSet.getInt("idGenero"));
+                    // Agrega más campos según los atributos en tu tabla Pelicula
+                    return pelicula;
+                }
             }
-
-        } catch (SQLException e) {
-            System.err.println("Error al obtener película por ID: " + e.getMessage());
         }
-
-        return pelicula;
+        return null;
     }
 
-    // Método privado para mapear un ResultSet a un objeto Pelicula
+
     private Pelicula mapResultSetToPelicula(ResultSet rs) throws SQLException {
         Pelicula pelicula = new Pelicula();
         pelicula.setIdPelicula(rs.getInt("idPelicula"));
@@ -59,7 +64,45 @@ public class PeliculaDAO extends DaoBase {
         pelicula.setAnoPublicacion(rs.getInt("anoPublicacion"));
         pelicula.setRating(rs.getDouble("rating"));
         pelicula.setBoxOffice(rs.getDouble("boxOffice"));
-        pelicula.setIdGenero(rs.getInt("idGenero"));
+        pelicula.setGenero(rs.getString("genero"));
         return pelicula;
     }
+
+    public List<Pelicula> buscarPeliculas(String searchQuery) {
+        List<Pelicula> peliculas = new ArrayList<>();
+        String sql = "SELECT p.idPelicula, p.titulo, p.director, p.anoPublicacion, p.rating, p.boxOffice, g.nombre AS genero " +
+                "FROM Pelicula p JOIN Genero g ON p.idGenero = g.idGenero " +
+                "WHERE p.titulo LIKE ? ORDER BY rating DESC, boxOffice DESC";
+
+        try (Connection conn = getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, "%" + searchQuery + "%");
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                Pelicula pelicula = mapResultSetToPelicula(rs);
+                peliculas.add(pelicula);
+            }
+        } catch (SQLException e) {
+            System.err.println("Error al buscar películas: " + e.getMessage());
+        }
+
+        return peliculas;
+    }
+
+    // En tu archivo PeliculaDAO.java
+    public boolean eliminarPelicula(int id) {
+        String sql = "DELETE FROM Pelicula WHERE idPelicula = ?";
+
+        try (Connection conn = getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            int filasAfectadas = stmt.executeUpdate();
+            return filasAfectadas > 0;
+        } catch (SQLException e) {
+            System.err.println("hubo un error al eliminar la película: " + e.getMessage());
+            return false;
+        }
+    }
+
 }
