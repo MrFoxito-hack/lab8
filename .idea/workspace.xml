@@ -9,17 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e8138d2-a96c-4496-aa1a-e650ffeba75a" name="Changes" comment="te amo Gonchito wapo">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="7e8138d2-a96c-4496-aa1a-e650ffeba75a" name="Changes" comment="commit con dos vistas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab8/beans/Pelicula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/beans/Pelicula.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab8/daos/ActorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/daos/ActorDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab8/daos/DaoBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/daos/DaoBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab8/daos/PeliculaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/daos/PeliculaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlets/DetallesServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlets/DetallesServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlets/PeliculaServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlets/PeliculaServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlets/ActorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlets/ActorServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/listaActores.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/listaActores.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/listaPeliculas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/listaPeliculas.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/viewPelicula.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/viewPelicula.jsp" afterDir="false" />
     </list>
@@ -180,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731015489236</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit con dos vistas">
+      <option name="closed" value="true" />
+      <created>1731030300500</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731030300500</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +190,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="te amo Gonchito wapo" />
-    <option name="LAST_COMMIT_MESSAGE" value="te amo Gonchito wapo" />
+    <MESSAGE value="commit con dos vistas" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit con dos vistas" />
   </component>
 </project>

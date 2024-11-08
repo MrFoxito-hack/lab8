@@ -60,7 +60,13 @@
             <td><%= pelicula.getRating() %>/10</td>
             <td>$ <%= String.format("%,d", (int) pelicula.getBoxOffice()) %></td>
             <td><%= pelicula.getGenero() %></td>
-            <td><a href="#" style="color: blue; text-decoration: underline;">Ver actores</a></td>
+            <!-- Enlace modificado para redirigir a ActorServlet con idPelicula -->
+            <td>
+                <a href="actores?idPelicula=<%= pelicula.getIdPelicula() %>" style="color: blue; text-decoration: underline;">
+                    Ver actores
+                </a>
+
+            </td>
             <!-- Cambia el enlace de eliminación por un formulario POST -->
             <td>
                 <form action="peliculas" method="post" style="display: inline;">
